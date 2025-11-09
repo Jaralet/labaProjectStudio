@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ItemDetailActivity"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/item_image_full"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sofa"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/item_title_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название товара"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/item_text_full"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Полное, детальное описание товара будет здесь. Оно может быть достаточно длинным."
+            android:textSize="16sp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_price_full"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1000 $"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="В корзину"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

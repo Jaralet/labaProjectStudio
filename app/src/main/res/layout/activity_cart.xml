@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CartActivity"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Моя корзина"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Сообщение о пустой корзине -->
+    <TextView
+        android:id="@+id/empty_cart_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Ваша корзина пока пуста"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="40dp"
+        android:visibility="visible"/>
+
+    <!-- Список товаров в корзине -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <!-- Общая сумма -->
+    <TextView
+        android:id="@+id/total_price_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Общая сумма: 0$"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#f0f0f0"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Кнопка оплаты -->
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Оплатить"
+        android:textSize="16sp"
+        android:padding="12dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+</LinearLayout>
